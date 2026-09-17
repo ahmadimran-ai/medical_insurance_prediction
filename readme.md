@@ -10,12 +10,6 @@ A simple **Gradio web application** allows users to enter their information and 
 
 ---
 
-## 🚀 Live Application
-
-**Demo:** Add your deployed application URL here
-
----
-
 ## 🎯 Problem Statement
 
 Medical insurance costs can vary significantly between individuals based on factors such as age, BMI, smoking status, number of children, gender, and geographical region.
@@ -51,6 +45,7 @@ The target variable is:
 The model learns the relationship between the input features and `charges` to predict an estimated insurance cost for a new individual.
 
 ---
+
 ## 🔄 Data Preprocessing
 
 The following preprocessing steps were performed:
@@ -68,9 +63,9 @@ The following preprocessing steps were performed:
 
 The dataset contains three categorical variables:
 
-* `sex`
-* `smoker`
-* `region`
+- `sex`
+- `smoker`
+- `region`
 
 These variables were converted into numerical dummy variables using Pandas:
 
@@ -106,7 +101,6 @@ y = df_encoded['charges']
 
 Finally, the data was divided into training and testing sets using an **80/20 train-test split**.
 
-
 ## 📈 Exploratory Data Analysis
 
 Several visualizations and statistical analyses were performed to understand the dataset.
@@ -141,10 +135,10 @@ Polynomial Features with **degree 2** were then applied to the input data.
 
 Polynomial transformation allows the model to capture additional relationships such as:
 
-* `age²`
-* `bmi²`
-* `age × bmi`
-* Other feature interactions
+- `age²`
+- `bmi²`
+- `age × bmi`
+- Other feature interactions
 
 The transformed features were then used with Linear Regression.
 
@@ -185,37 +179,35 @@ A simple interactive web application was developed using **Gradio**.
 
 Users can enter:
 
-* Age
-* BMI
-* Number of children
-* Gender
-* Smoking status
-* Region
+- Age
+- BMI
+- Number of children
+- Gender
+- Smoking status
+- Region
 
 The application processes the input using the same preprocessing and polynomial transformation used during model training and then generates an estimated insurance cost.
 
 ### Application Features
 
-* Clean and responsive interface
-* User-friendly input controls
-* Instant prediction
-* Estimated insurance cost display
-* Model performance information
-* Uses the trained Polynomial Regression model
-
-
+- Clean and responsive interface
+- User-friendly input controls
+- Instant prediction
+- Estimated insurance cost display
+- Model performance information
+- Uses the trained Polynomial Regression model
 
 ## 🛠️ Technologies Used
 
-* **Python**
-* **Pandas**
-* **NumPy**
-* **Scikit-learn**
-* **Matplotlib**
-* **Joblib**
-* **Gradio**
-* **Google Colab**
-* **GitHub**
+- **Python**
+- **Pandas**
+- **NumPy**
+- **Scikit-learn**
+- **Matplotlib**
+- **Joblib**
+- **Gradio**
+- **Google Colab**
+- **GitHub**
 
 ---
 
@@ -230,11 +222,6 @@ medical-insurance-cost-prediction/
 ├── polynomial_features.pkl
 ├── requirements.txt
 ├── README.md
-│
-└── screenshots/
-    ├── home.png
-    ├── prediction.png
-    └── results.png
 ```
 
 ### File Description
@@ -247,7 +234,6 @@ medical-insurance-cost-prediction/
 | `polynomial_features.pkl`            | Saved Polynomial Features transformer              |
 | `requirements.txt`                   | Required Python libraries                          |
 | `README.md`                          | Project documentation                              |
-| `screenshots/`                       | Application and result screenshots                 |
 
 ---
 
@@ -280,12 +266,12 @@ The Gradio application will provide a local web interface where users can enter 
 
 This project has several limitations:
 
-* The dataset contains only **1,338 records**.
-* The dataset may not represent the population or insurance pricing practices of all regions.
-* Predictions are estimates and should not be treated as actual insurance quotations.
-* Important real-world factors may not be included in the dataset.
-* Model performance depends on the quality and distribution of the available data.
-* The reported evaluation metrics are based on a particular train-test split.
+- The dataset contains only **1,338 records**.
+- The dataset may not represent the population or insurance pricing practices of all regions.
+- Predictions are estimates and should not be treated as actual insurance quotations.
+- Important real-world factors may not be included in the dataset.
+- Model performance depends on the quality and distribution of the available data.
+- The reported evaluation metrics are based on a particular train-test split.
 
 ---
 
@@ -293,14 +279,14 @@ This project has several limitations:
 
 Possible future improvements include:
 
-* Testing additional regression algorithms.
-* Hyperparameter tuning.
-* Applying cross-validation.
-* Using a larger and more diverse dataset.
-* Adding prediction confidence or uncertainty estimates.
-* Improving the user interface.
-* Deploying the application as a production web service.
-* Adding model monitoring and periodic retraining.
+- Testing additional regression algorithms.
+- Hyperparameter tuning.
+- Applying cross-validation.
+- Using a larger and more diverse dataset.
+- Adding prediction confidence or uncertainty estimates.
+- Improving the user interface.
+- Deploying the application as a production web service.
+- Adding model monitoring and periodic retraining.
 
 ---
 
